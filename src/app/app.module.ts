@@ -6,11 +6,14 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { CalculatorComponent } from '../components/calculator/calculator';
+import { ResolveProvider } from '../providers/resolve/resolve';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    CalculatorComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,8 @@ import { HomePage } from '../pages/home/home';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ResolveProvider
   ]
 })
 export class AppModule {}
